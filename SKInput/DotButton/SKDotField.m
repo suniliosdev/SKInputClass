@@ -40,6 +40,12 @@
 -(void)addTextFieldObserver{
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(TextDidBeginEditing:) name:UITextFieldTextDidBeginEditingNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardDidShow:)
+                                                 name:UIKeyboardDidShowNotification
+                                               object:nil];
+    
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationWillChange) name:UIApplicationWillChangeStatusBarOrientationNotification object:nil];
 
@@ -60,8 +66,16 @@
         }else{
             [self removeDotButton];
         }
-
 }
+- (void)keyboardDidShow:(NSNotification *)note {
+	// if clause is just an additional precaution, you could also dismiss it
+    if ([self isFirstResponder]) {
+        [self addButtonToKeyboard];
+    }else{
+        [self removeDotButton];
+    }
+}
+
 -(void)orientationWillChange{
     if (isDot) {
         [self resignFirstResponder];

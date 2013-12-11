@@ -46,6 +46,12 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(TextDidBeginEditing:) name:UITextFieldTextDidBeginEditingNotification object:nil];
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationWillChange) name:UIApplicationDidChangeStatusBarOrientationNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardDidShow:)
+                                                 name:UIKeyboardDidShowNotification
+                                               object:nil];
+
 }
 
 -(void)removeTextFieldObserver{
@@ -63,6 +69,16 @@
         [self removeDoneButton];
     }
 }
+
+- (void)keyboardDidShow:(NSNotification *)note {
+	// if clause is just an additional precaution, you could also dismiss it
+    if ([self isFirstResponder]) {
+        [self addButtonToKeyboard];
+    }else{
+        [self removeDoneButton];
+    }
+}
+
 -(void)orientationWillChange{
     if (isDigit) {
         [self resignFirstResponder];
@@ -85,15 +101,29 @@
         [doneButton setTitle:@" Done" forState:UIControlStateNormal];
         [doneButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [doneButton observeProperty:@"highlighted" withBlock:^(__weak id self, id old, id new) {
-            NSLog(@"is hight %d",doneButton.highlighted);
             [doneButton setBackgroundColor:(doneButton.highlighted?[UIColor whiteColor]:[UIColor clearColor])];
         }];
     }else if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 3.0) {
-        [doneButton setImage:[UIImage imageNamed:@"DoneUp3LS.png"] forState:UIControlStateNormal];
-        [doneButton setImage:[UIImage imageNamed:@"DoneDown3LS.png"] forState:UIControlStateHighlighted];
+        if (IsLandscape) {
+            doneButton.frame = CGRectMake(0, 123, IsIphone5?187:158, 39.5);
+            [doneButton setImage:[UIImage imageNamed:@"DoneUp3LS.png"] forState:UIControlStateNormal];
+            [doneButton setImage:[UIImage imageNamed:@"DoneDown3LS.png"] forState:UIControlStateHighlighted];
+        }else{
+            doneButton.frame = CGRectMake(0, 163, 105.5, 53.5);
+            [doneButton setImage:[UIImage imageNamed:@"DoneUp3.png"] forState:UIControlStateNormal];
+            [doneButton setImage:[UIImage imageNamed:@"DoneDown3.png"] forState:UIControlStateHighlighted];
+        }
+
     } else {
-        [doneButton setImage:[UIImage imageNamed:@"DoneUpLS.png"] forState:UIControlStateNormal];
-        [doneButton setImage:[UIImage imageNamed:@"DoneDownLS.png"] forState:UIControlStateHighlighted];
+        if (IsLandscape) {
+            doneButton.frame = CGRectMake(0, 123, IsIphone5?187:158, 39.5);
+            [doneButton setImage:[UIImage imageNamed:@"DoneUpLS.png"] forState:UIControlStateNormal];
+            [doneButton setImage:[UIImage imageNamed:@"DoneDownLS.png"] forState:UIControlStateHighlighted];
+        }else{
+            doneButton.frame = CGRectMake(0, 163, 105.5, 53.5);
+            [doneButton setImage:[UIImage imageNamed:@"DoneUp.png"] forState:UIControlStateNormal];
+            [doneButton setImage:[UIImage imageNamed:@"DoneDown.png"] forState:UIControlStateHighlighted];
+        }
     }
     
 	[doneButton addTarget:self action:@selector(doneButton:) forControlEvents:UIControlEventTouchUpInside];
