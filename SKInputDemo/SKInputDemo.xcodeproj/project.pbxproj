@@ -33,7 +33,6 @@
 		5E3259FB18582DFC00FBE442 /* SKDotField.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3259E518582DFB00FBE442 /* SKDotField.m */; };
 		5E3259FC18582DFC00FBE442 /* MTKObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3259E818582DFB00FBE442 /* MTKObserver.m */; };
 		5E3259FD18582DFC00FBE442 /* NSObject+MTKObserving.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3259EC18582DFC00FBE442 /* NSObject+MTKObserving.m */; };
-		5E337BF81859E89600895E20 /* SKInput.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 5E337BF71859E89600895E20 /* SKInput.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,7 +87,6 @@
 		5E3259EF18582DFC00FBE442 /* metamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = metamacros.h; sourceTree = "<group>"; };
 		5E3259F018582DFC00FBE442 /* scope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scope.h; sourceTree = "<group>"; };
 		5E3259F118582DFC00FBE442 /* SKConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKConstant.h; sourceTree = "<group>"; };
-		5E337BF71859E89600895E20 /* SKInput.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SKInput.podspec; path = ../SKInput.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +116,6 @@
 		5E166C4A184C62C3003BD9D3 = {
 			isa = PBXGroup;
 			children = (
-				5E337BF71859E89600895E20 /* SKInput.podspec */,
 				5E3259D718582DFB00FBE442 /* SKInput */,
 				5E166C5C184C62C3003BD9D3 /* SKInputDemo */,
 				5E166C7B184C62C4003BD9D3 /* SKInputDemoTests */,
@@ -329,7 +326,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E3259F618582DFC00FBE442 /* DoneUp.png in Resources */,
-				5E337BF81859E89600895E20 /* SKInput.podspec in Resources */,
 				5E3259F418582DFC00FBE442 /* DoneDown3LS.png in Resources */,
 				5E166C6F184C62C3003BD9D3 /* Images.xcassets in Resources */,
 				5E3259F818582DFC00FBE442 /* DoneUp3LS.png in Resources */,
