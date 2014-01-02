@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.license = { :type => 'MIT', :file => 'LICENSE' }
   s.platform     = :ios
   s.author       = { "SunilSpaceo" => "sunil@spaceotechnologies.com" }
-  s.source       = { :git => "https://github.com/SunilSpaceo/SKInputClass.git", :tag => s.version.to_s }
+  s.source       = { :git => "https://github.com/SunilSpaceo/SKInputClass.git"}
   s.requires_arc = true
   s.source_files = 'SKInput'
 end
