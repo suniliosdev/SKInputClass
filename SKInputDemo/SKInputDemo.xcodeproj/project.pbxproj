@@ -29,8 +29,6 @@
 		5E1A670E18759B8100AB5D2D /* DoneUp3.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E1A66F818759B8100AB5D2D /* DoneUp3.png */; };
 		5E1A670F18759B8100AB5D2D /* DoneUp3LS.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E1A66F918759B8100AB5D2D /* DoneUp3LS.png */; };
 		5E1A671018759B8100AB5D2D /* DoneUpLS.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E1A66FA18759B8100AB5D2D /* DoneUpLS.png */; };
-		5E1A671118759B8100AB5D2D /* MTKObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1A66FE18759B8100AB5D2D /* MTKObserver.m */; };
-		5E1A671218759B8100AB5D2D /* NSObject+MTKObserving.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1A670218759B8100AB5D2D /* NSObject+MTKObserving.m */; };
 		5E1A671318759B8100AB5D2D /* SKDigitField.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1A670618759B8100AB5D2D /* SKDigitField.m */; };
 		5E1A671418759B8100AB5D2D /* SKDotField.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1A670818759B8100AB5D2D /* SKDotField.m */; };
 /* End PBXBuildFile section */
@@ -73,15 +71,6 @@
 		5E1A66F818759B8100AB5D2D /* DoneUp3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoneUp3.png; sourceTree = "<group>"; };
 		5E1A66F918759B8100AB5D2D /* DoneUp3LS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoneUp3LS.png; sourceTree = "<group>"; };
 		5E1A66FA18759B8100AB5D2D /* DoneUpLS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoneUpLS.png; sourceTree = "<group>"; };
-		5E1A66FB18759B8100AB5D2D /* keypath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = keypath.h; sourceTree = "<group>"; };
-		5E1A66FC18759B8100AB5D2D /* metamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = metamacros.h; sourceTree = "<group>"; };
-		5E1A66FD18759B8100AB5D2D /* MTKObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTKObserver.h; sourceTree = "<group>"; };
-		5E1A66FE18759B8100AB5D2D /* MTKObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTKObserver.m; sourceTree = "<group>"; };
-		5E1A66FF18759B8100AB5D2D /* MTKObserving.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTKObserving.h; sourceTree = "<group>"; };
-		5E1A670018759B8100AB5D2D /* MTKObservingMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTKObservingMacros.h; sourceTree = "<group>"; };
-		5E1A670118759B8100AB5D2D /* NSObject+MTKObserving.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MTKObserving.h"; sourceTree = "<group>"; };
-		5E1A670218759B8100AB5D2D /* NSObject+MTKObserving.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MTKObserving.m"; sourceTree = "<group>"; };
-		5E1A670318759B8100AB5D2D /* scope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scope.h; sourceTree = "<group>"; };
 		5E1A670418759B8100AB5D2D /* SKConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKConstant.h; sourceTree = "<group>"; };
 		5E1A670518759B8100AB5D2D /* SKDigitField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKDigitField.h; sourceTree = "<group>"; };
 		5E1A670618759B8100AB5D2D /* SKDigitField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKDigitField.m; sourceTree = "<group>"; };
@@ -198,15 +187,6 @@
 				5E1A66F818759B8100AB5D2D /* DoneUp3.png */,
 				5E1A66F918759B8100AB5D2D /* DoneUp3LS.png */,
 				5E1A66FA18759B8100AB5D2D /* DoneUpLS.png */,
-				5E1A66FB18759B8100AB5D2D /* keypath.h */,
-				5E1A66FC18759B8100AB5D2D /* metamacros.h */,
-				5E1A66FD18759B8100AB5D2D /* MTKObserver.h */,
-				5E1A66FE18759B8100AB5D2D /* MTKObserver.m */,
-				5E1A66FF18759B8100AB5D2D /* MTKObserving.h */,
-				5E1A670018759B8100AB5D2D /* MTKObservingMacros.h */,
-				5E1A670118759B8100AB5D2D /* NSObject+MTKObserving.h */,
-				5E1A670218759B8100AB5D2D /* NSObject+MTKObserving.m */,
-				5E1A670318759B8100AB5D2D /* scope.h */,
 				5E1A670418759B8100AB5D2D /* SKConstant.h */,
 				5E1A670518759B8100AB5D2D /* SKDigitField.h */,
 				5E1A670618759B8100AB5D2D /* SKDigitField.m */,
@@ -322,12 +302,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E1A671118759B8100AB5D2D /* MTKObserver.m in Sources */,
 				5E166C6D184C62C3003BD9D3 /* ViewController.m in Sources */,
 				5E1A671418759B8100AB5D2D /* SKDotField.m in Sources */,
 				5E1A671318759B8100AB5D2D /* SKDigitField.m in Sources */,
 				5E166C67184C62C3003BD9D3 /* AppDelegate.m in Sources */,
-				5E1A671218759B8100AB5D2D /* NSObject+MTKObserving.m in Sources */,
 				5E166C63184C62C3003BD9D3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,7 +373,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Danny Wheeler (2KTD7H927Y)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Danny Wheeler (2KTD7H927Y)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -413,6 +392,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "69513A52-FD20-40AA-AF23-68957B4C88A4";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -434,7 +414,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Danny Wheeler (2KTD7H927Y)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Danny Wheeler (2KTD7H927Y)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -445,6 +426,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PROVISIONING_PROFILE = "69513A52-FD20-40AA-AF23-68957B4C88A4";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -455,11 +437,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Danny Wheeler (2KTD7H927Y)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Danny Wheeler (2KTD7H927Y)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SKInputDemo/SKInputDemo-Prefix.pch";
 				INFOPLIST_FILE = "SKInputDemo/SKInputDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "69513A52-FD20-40AA-AF23-68957B4C88A4";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -469,11 +454,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Danny Wheeler (2KTD7H927Y)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Danny Wheeler (2KTD7H927Y)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SKInputDemo/SKInputDemo-Prefix.pch";
 				INFOPLIST_FILE = "SKInputDemo/SKInputDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "69513A52-FD20-40AA-AF23-68957B4C88A4";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

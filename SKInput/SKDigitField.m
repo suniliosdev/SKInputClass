@@ -100,9 +100,6 @@
         [doneButton.titleLabel setFont:[UIFont fontWithName:@"helvetica ligth" size:doneButton.titleLabel.font.pointSize]];
         [doneButton setTitle:@" Done" forState:UIControlStateNormal];
         [doneButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [doneButton observeProperty:@"highlighted" withBlock:^(__weak id self, id old, id new) {
-            [doneButton setBackgroundColor:(doneButton.highlighted?[UIColor whiteColor]:[UIColor clearColor])];
-        }];
     }else if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 3.0) {
         if (IsLandscape) {
             doneButton.frame = CGRectMake(0, 123, IsIphone5?187:158, 39.5);
@@ -166,7 +163,6 @@
 }
 
 -(void)removeDoneButton{
-    [doneButton removeAllObservations];
     isDigit=NO;
     phoneTagOrNot=YES;
     [doneButton removeFromSuperview];
