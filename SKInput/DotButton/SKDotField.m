@@ -41,14 +41,14 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(TextDidBeginEditing:) name:UITextFieldTextDidBeginEditingNotification object:nil];
     
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationWillChange) name:UIApplicationWillChangeStatusBarOrientationNotification object:nil];
+
+    
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardDidShow:)
                                                  name:UIKeyboardDidShowNotification
                                                object:nil];
-    
-
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationWillChange) name:UIApplicationWillChangeStatusBarOrientationNotification object:nil];
-
 }
 -(void)removeTextFieldObserver{
     
@@ -83,12 +83,16 @@
 }
 -(void)createDotButton{
     
+	if (btnDot) {
+		[self removeDotButton];
+		isDot=YES;
+	}
     btnDot = [UIButton buttonWithType:UIButtonTypeCustom];
     btnDot.adjustsImageWhenHighlighted = NO;
     btnDot.frame = CGRectMake(0, 163, 106, 53);
     
-    if (IsLandscape) {
-        btnDot.frame = CGRectMake(0, 122.5, IsIphone5?186.5:157.5, 39.5);
+    if (IsSKLandscape) {
+        btnDot.frame = CGRectMake(0, 122.5, IsSKIphone5?186.5:157.5, 39.5);
     }else{
         btnDot.frame = CGRectMake(0, 162.5, 104.5, 53.5);
     }
@@ -153,10 +157,9 @@
 - (void)symbolButtonTapped:(id)sender {
     
     NSString *strToShow= self.strSymbol?self.strSymbol:@".";
-    BOOL containDot =  [self.text rangeOfString:strToShow options:NSCaseInsensitiveSearch].location == NSNotFound ? NO : YES;
-    if (!containDot) {
-        self.text=[self.text stringByAppendingString:strToShow];
-    }
+	self.text=[self.text stringByAppendingString:strToShow];
+
+
 }
 
 

@@ -12,6 +12,7 @@
 #import "SKDigitField.h"
 #import "SKDotField.h"
 
-#define IsLandscape              UIInterfaceOrientationIsLandscape([UIDevice currentDevice].orientation)
-#define IsIphone5     ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
+#import "MTKObserving.h"
+#define IsSKLandscape              UIInterfaceOrientationIsLandscape([UIDevice currentDevice].orientation)
+#define IsSKIphone5     ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
 

@@ -89,8 +89,8 @@
 	doneButton.adjustsImageWhenHighlighted = NO;
 	
     
-    if (IsLandscape) {
-        doneButton.frame = CGRectMake(0, 122.5, IsIphone5?186.5:157.5, 39.5);
+    if (IsSKLandscape) {
+        doneButton.frame = CGRectMake(0, 122.5, IsSKIphone5?186.5:157.5, 39.5);
     }else{
         doneButton.frame = CGRectMake(0, 162.5, 104.5, 53.5);
     }
@@ -100,9 +100,12 @@
         [doneButton.titleLabel setFont:[UIFont fontWithName:@"helvetica ligth" size:doneButton.titleLabel.font.pointSize]];
         [doneButton setTitle:@" Done" forState:UIControlStateNormal];
         [doneButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [doneButton observeProperty:@"highlighted" withBlock:^(__weak id self, id old, id new) {
+            [doneButton setBackgroundColor:(doneButton.highlighted?[UIColor whiteColor]:[UIColor clearColor])];
+        }];
     }else if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 3.0) {
-        if (IsLandscape) {
-            doneButton.frame = CGRectMake(0, 123, IsIphone5?187:158, 39.5);
+        if (IsSKLandscape) {
+            doneButton.frame = CGRectMake(0, 123, IsSKIphone5?187:158, 39.5);
             [doneButton setImage:[UIImage imageNamed:@"DoneUp3LS.png"] forState:UIControlStateNormal];
             [doneButton setImage:[UIImage imageNamed:@"DoneDown3LS.png"] forState:UIControlStateHighlighted];
         }else{
@@ -112,8 +115,8 @@
         }
 
     } else {
-        if (IsLandscape) {
-            doneButton.frame = CGRectMake(0, 123, IsIphone5?187:158, 39.5);
+        if (IsSKLandscape) {
+            doneButton.frame = CGRectMake(0, 123, IsSKIphone5?187:158, 39.5);
             [doneButton setImage:[UIImage imageNamed:@"DoneUpLS.png"] forState:UIControlStateNormal];
             [doneButton setImage:[UIImage imageNamed:@"DoneDownLS.png"] forState:UIControlStateHighlighted];
         }else{
@@ -163,6 +166,7 @@
 }
 
 -(void)removeDoneButton{
+    [doneButton removeAllObservations];
     isDigit=NO;
     phoneTagOrNot=YES;
     [doneButton removeFromSuperview];
